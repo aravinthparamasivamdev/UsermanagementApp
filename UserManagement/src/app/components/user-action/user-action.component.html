@@ -1,0 +1,8 @@
+<p>
+    Select id
+    <select [(ngModel)]="selectedId">
+        <option *ngFor="let id of ids" value={{id}}>{{id}}</option>
+    </select>
+</p>
+
+<app-new-user [id]="selectedId"></app-new-user>

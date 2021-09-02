@@ -1,0 +1,18 @@
+<div class="form">
+    <h2 *ngIf="id==0">New user details</h2>
+    <h2 *ngIf="id!=0">User details</h2>
+    <span style="color:red">{{errorMessage}}</span>
+    <p type="Name:"><input placeholder="Write your name here.." [(ngModel)]="name" /></p>
+    <p type="Gender:"><select [(ngModel)]="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+        </select>
+    </p>
+    <p type="Email:"><input placeholder="Let us know how to contact you back.." [(ngModel)]="emailId" /></p>
+    <button (click)="saveDetails()" *ngIf="id==0">Save</button>
+    <div class="info" *ngIf="showMessage">
+        <span class="fa fa-phone"></span>{{name}}
+        <span class="fa fa-envelope-o"></span> {{emailId}} Saved successfully
+    </div>
+</div>

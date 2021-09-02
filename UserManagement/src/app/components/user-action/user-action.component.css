@@ -1,0 +1,21 @@
+select {
+    width: 20%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid #bebed2
+}
+
+p {
+    margin-left: 10%;
+    margin-top: 3%;
+    content: attr(type);
+    display: block;
+    font-size: 14px;
+    color: #5a5a5a
+}
